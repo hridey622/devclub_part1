@@ -20,3 +20,14 @@ class BookDetailView(
     template_name = 'books/book_detail.html'
     login_url = 'login'
     permission_required = 'books.special_status' # new
+
+
+class SearchResultsListView(ListView): # new
+    model = Book
+    context_object_name = 'book_list'
+    template_name = 'books/search_results.html'
+    def get_queryset(self):
+        return Book.objects.filter(
+            Q(title__icontains='beginners') | Q(title__icontains='api')
+        )
+   
