@@ -22,8 +22,7 @@ import debug_toolbar
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accounts/', include('django.contrib.auth.urls')),
-    path('accounts/', include('users.urls')), # new
+    path('accounts/', include('allauth.urls')),
     path('', include('pages.urls')), # new
     path('books/', include('books.urls')), # new
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

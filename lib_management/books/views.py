@@ -9,7 +9,7 @@ class BookListView(ListView):
     model = Book
     context_object_name = 'book_list'
     template_name = 'books/book_list.html'
-    login_url = 'login'
+    login_url = 'account_login'
 
 class BookDetailView(
     LoginRequiredMixin,
