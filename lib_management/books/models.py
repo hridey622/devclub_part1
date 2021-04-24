@@ -15,6 +15,7 @@ class Book(models.Model):
     publisher = models.CharField(max_length=200)
     genre = models.CharField(max_length=10)
     isbn = models.IntegerField()
+    summary = models.CharField(max_length=10000, default= 'summary')
     location = models.CharField(max_length=1000)
     availability = models.IntegerField()
     cover = models.ImageField(upload_to='covers/', blank=True)

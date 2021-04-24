@@ -11,7 +11,7 @@ class BookAdmin(admin.ModelAdmin):
         ReviewInline,
     ]
 
-    list_display = ("title","author","publisher","genre","isbn","location","availability")
+    list_display = ("title","author","publisher","genre","isbn","summary","location","availability")
 
 
 
