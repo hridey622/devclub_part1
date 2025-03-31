@@ -1,1 +1,0 @@
-cover = models.ImageField(upload_to='covers/', blank=True) # new
